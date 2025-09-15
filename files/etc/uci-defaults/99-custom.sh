@@ -17,7 +17,7 @@ uci set dhcp.lan.ignore='1'
 # /etc/config/network
 uci set network.lan.device='eth0'
 uci del network.lan.ip6assign
-uci set network.lan.ipaddr='192.168.2.8'
+uci set network.lan.ipaddr='192.168.2.3'
 uci set network.lan.netmask='255.255.255.0'
 uci set network.lan.gateway='192.168.2.1'
 uci add_list network.lan.dns='192.168.2.1'
@@ -29,6 +29,8 @@ uci del firewall.cfg01e63d.fullcone6
 uci del firewall.cfg01e63d.flow_offloading
 uci del firewall.cfg01e63d.flow_offloading_hw
 uci set firewall.cfg02dc81.masq='1'
+uci set firewall.cfg01e63d.input='ACCEPT'
+uci set firewall.cfg01e63d.forward='ACCEPT'
 
 # 设置所有网口可访问网页终端
 uci delete ttyd.@ttyd[0].interface
