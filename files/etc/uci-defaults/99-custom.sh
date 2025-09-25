@@ -17,7 +17,7 @@ uci set dhcp.lan.ignore='1'
 # /etc/config/network
 uci set network.lan.device='eth0'
 uci del network.lan.ip6assign
-uci set network.lan.ipaddr='192.168.2.9'
+uci set network.lan.ipaddr='192.168.2.3'
 uci set network.lan.netmask='255.255.255.0'
 uci set network.lan.gateway='192.168.2.1'
 uci add_list network.lan.dns='192.168.2.1'
@@ -29,7 +29,7 @@ uci del firewall.cfg01e63d.fullcone6
 uci del firewall.cfg01e63d.flow_offloading
 uci del firewall.cfg01e63d.flow_offloading_hw
 #IP动态伪装
-uci set firewall.cfg02dc81.masq='1'
+#uci set firewall.cfg02dc81.masq='1'
 #入站数据接受
 uci set firewall.cfg01e63d.input='ACCEPT'
 #转发接受
